@@ -38,7 +38,7 @@ export default class EditCase extends Component {
     
       getSettingsGeneralDetails(){
         const id_user = localStorage.getItem('id');
-        api.get('http://localhost:3333/profile', {
+        api.get(`${process.env.API_URL}/profile`, {
             headers: {
                 authorization: id_user,
             }})
@@ -68,7 +68,7 @@ export default class EditCase extends Component {
       handleEditCase(newSettingsGeneral){
         const id_user = localStorage.getItem('id');
         console.log(newSettingsGeneral);
-        api.put('http://localhost:3333/case/edit', newSettingsGeneral, {
+        api.put(`${process.env.API_URL}/case/edit`, newSettingsGeneral, {
             headers: {
                 authorization: id_user,
             }}).then(response => {

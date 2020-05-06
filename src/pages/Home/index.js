@@ -21,7 +21,7 @@ export class Home extends Component {
       }
 
       ListCasesHome() {
-        fetch(`http://localhost:3333/home/`)
+        fetch(`${process.env.API_URL}/home/`)
         .then((response) => response.json())
         .then(casesList => {
             this.setState({ cases: casesList });
@@ -32,7 +32,7 @@ export class Home extends Component {
 
         //const { match: { params } } = this.props;
         
-        fetch('http://localhost:3333/home/categories')
+        fetch(`${process.env.API_URL}/categories`)
         .then((response) => response.json())
         .then(categoriesList => {
             this.setState({ categories: categoriesList });
@@ -43,7 +43,7 @@ export class Home extends Component {
         ListCases(a) {
                 const category = a;
                 this.setState({ activeId: a })
-                fetch(`http://localhost:3333/home/category/${category}`)
+                fetch(`${process.env.API_URL}/home/category/${category}`)
                 .then((response) => response.json())
                 .then(casesList => {
                     this.setState({ cases: casesList });
