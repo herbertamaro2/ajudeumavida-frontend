@@ -32,7 +32,7 @@ export class Home extends Component {
 
         //const { match: { params } } = this.props;
         
-        fetch(`https://ajudeumavida-backend.herokuapp.com/categories`)
+        fetch(`https://ajudeumavida-backend.herokuapp.com/home/categories`)
         .then((response) => response.json())
         .then(categoriesList => {
             this.setState({ categories: categoriesList });
