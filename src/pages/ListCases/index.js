@@ -21,7 +21,7 @@ export default class ListCases extends Component {
       }
 
       ListDesactive() {
-        fetch(`http://localhost:3333/caseinactive/`)
+        fetch(`https://ajudeumavida-backend.herokuapp.com/caseinactive/`)
         .then((response) => response.json())
         .then(casesList => {
             this.setState({ cases: casesList });
@@ -36,7 +36,7 @@ export default class ListCases extends Component {
         Aprovar(a){
             
             const id = a;
-            api.put(`http://localhost:3333/active/case/${id}`)
+            api.put(`https://ajudeumavida-backend.herokuapp.com/active/case/${id}`)
             .then(casesList => {
                 this.setState({ cases: casesList });
             });

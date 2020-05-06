@@ -19,9 +19,9 @@ export class Home extends Component {
           activeId: null
         };
       }
-
+      
       ListCasesHome() {
-        fetch(`${process.env.API_URL}/home/`)
+        fetch(`https://ajudeumavida-backend.herokuapp.com/home/`)
         .then((response) => response.json())
         .then(casesList => {
             this.setState({ cases: casesList });
@@ -32,7 +32,7 @@ export class Home extends Component {
 
         //const { match: { params } } = this.props;
         
-        fetch(`${process.env.API_URL}/categories`)
+        fetch(`https://ajudeumavida-backend.herokuapp.com/categories`)
         .then((response) => response.json())
         .then(categoriesList => {
             this.setState({ categories: categoriesList });
@@ -43,7 +43,7 @@ export class Home extends Component {
         ListCases(a) {
                 const category = a;
                 this.setState({ activeId: a })
-                fetch(`${process.env.API_URL}/home/category/${category}`)
+                fetch(`https://ajudeumavida-backend.herokuapp.com/home/category/${category}`)
                 .then((response) => response.json())
                 .then(casesList => {
                     this.setState({ cases: casesList });

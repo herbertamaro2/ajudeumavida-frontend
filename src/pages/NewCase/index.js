@@ -9,7 +9,6 @@ import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
 
 export default function NewIncident(){
-    //const ongId = localStorage.getItem('ongId');
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('');
     const [telefone, setTelefone] = useState('');
@@ -46,7 +45,7 @@ export default function NewIncident(){
         };
         
         try{
-            await api.post('http://localhost:3333/cases/insert', data, {
+            await api.post('https://ajudeumavida-backend.herokuapp.com/cases/insert', data, {
                 headers: {
 
                 }

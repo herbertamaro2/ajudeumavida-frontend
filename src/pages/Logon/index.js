@@ -14,7 +14,7 @@ export default function Logon(){
     async function handleLogin(e){
         e.preventDefault();
         try {
-            const response = await api.post('http://localhost:3333/login', {email, password});
+            const response = await api.post('https://ajudeumavida-backend.herokuapp.com/login', {email, password});
             localStorage.setItem('id', response.headers.authorization);
             localStorage.setItem('id', response.data.id);
             localStorage.setItem('email', response.data.email);

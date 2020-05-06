@@ -38,7 +38,7 @@ export default class EditCase extends Component {
     
       getSettingsGeneralDetails(){
         const id_user = localStorage.getItem('id');
-        api.get(`${process.env.API_URL}/profile`, {
+        api.get(`https://ajudeumavida-backend.herokuapp.com/profile`, {
             headers: {
                 authorization: id_user,
             }})
@@ -68,7 +68,7 @@ export default class EditCase extends Component {
       handleEditCase(newSettingsGeneral){
         const id_user = localStorage.getItem('id');
         console.log(newSettingsGeneral);
-        api.put(`${process.env.API_URL}/case/edit`, newSettingsGeneral, {
+        api.put(`https://ajudeumavida-backend.herokuapp.com/case/edit`, newSettingsGeneral, {
             headers: {
                 authorization: id_user,
             }}).then(response => {

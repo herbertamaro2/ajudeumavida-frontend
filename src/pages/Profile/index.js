@@ -21,7 +21,7 @@ export class Profile extends Component {
       }
     componentDidMount(){
         const id = localStorage.getItem('id');
-        fetch('http://localhost:3333/profile', {
+        fetch('https://ajudeumavida-backend.herokuapp.com/profile', {
             headers: {
                 authorization:id,
             }})
@@ -35,7 +35,7 @@ export class Profile extends Component {
     } 
 
     handleGetMessages = (e) => {
-        fetch(`http://localhost:3333/messages/${e}`)
+        fetch(`https://ajudeumavida-backend.herokuapp.com/messages/${e}`)
         .then((responsemes) => responsemes.json())
         .then(resmes => {
             this.setState({ messages: resmes });

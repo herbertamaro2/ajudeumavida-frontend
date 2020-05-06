@@ -39,7 +39,7 @@ export default class Messages extends Component {
       handleSendMessage(newSettingsGeneral){
         console.log(newSettingsGeneral);
         const { match: { params } } = this.props;
-        api.post('http://localhost:3333/messages', newSettingsGeneral,{
+        api.post('https://ajudeumavida-backend.herokuapp.com/messages', newSettingsGeneral,{
             headers: {
                 idcase:`${params.id}`,
             }}).then(response => {
