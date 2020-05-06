@@ -1,0 +1,34 @@
+.policy .content {
+    width: 100%;
+    padding: 25px 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: block;
+    align-items: center;
+}
+
+.policy .form{
+    width: 100%;
+    float: left;
+}
+
+.policy .form {
+    width: 100%;
+    float: left;
+    max-height: none;
+}
+
+.policy a {
+    color: #000;
+}
+
+.policy p {
+    line-height: 1.5;
+}
+
+.policy h2 {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #e02041;
+}
