@@ -10,7 +10,7 @@ export default function Index(){
                 <img src={logoImg} className="logo" /> 
              
                 <h1>Escolhe uma das opções abaixo:</h1>
-                <p>Ajuda comunitária</p>
+                <p>Faça sua parte ajudando a quem precisa, doe seu tempo, seja com apoio emocional, doações materiais, alimentos etc...</p>
 
                 <Link to="/category" className="button">Eu vou Ajudar</Link>
                 <Link to="/cases/new" className="button btn-yellow">Preciso de Ajuda</Link>
