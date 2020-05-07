@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import logoImg from '../../assets/logo.png';
-import heroesImg from '../../assets/heroes.png';
 import {FiLogIn} from 'react-icons/fi';
 import api from '../../services/api';
 
@@ -51,7 +50,8 @@ export default function Logon(){
                         Não tenho cadastro</Link>
                 </form>
             </section>
-            <img src={heroesImg} alt="Heroes" />
+            <div class="box-img-home">
+            </div>  
         </div>
     );
 }

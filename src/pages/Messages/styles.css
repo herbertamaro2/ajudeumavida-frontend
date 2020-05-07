@@ -1,0 +1,9 @@
+.sendmessage ul.info.case.info-texto {
+    display: block;
+    margin-top: 0;
+    grid-gap: 0;
+}
+
+.sendmessage .content .content{
+    display:none;
+}

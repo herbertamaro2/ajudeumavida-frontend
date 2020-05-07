@@ -195,3 +195,12 @@ a.is-active {
     }
 
 }
+
+.box-img-home{
+    background: url("../src/assets/homeimg.jpg");
+    background-size:cover;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+}

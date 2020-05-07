@@ -82,7 +82,7 @@ export default class Messages extends Component {
         <div>
         <Header />
 
-        <div className="new-incident-container editform">
+        <div className="new-incident-container editform sendmessage">
             
             <form onSubmit={this.onSubmit.bind(this)}>
             

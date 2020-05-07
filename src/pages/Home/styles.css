@@ -1,11 +1,11 @@
 ::-webkit-scrollbar {
-    background: #bbb;
+    background: #000;
     width: 8px;
     height: 0px;
     cursor: n-resize;
 }
 ::-webkit-scrollbar-thumb {
-    background: #e02041;
+    background: #edc951;
     cursor: n-resize;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
