@@ -79,7 +79,7 @@ export default function NewIncident(){
         <Header />
         <div class="text info">
                 <h1>Realize o cadastro da sua solicitação</h1>
-                <p>A seu pedido de ajuda, será processado, até ser ativada em nosso site.</p>
+                <p>O seu pedido de ajuda, será processado, até ser ativado em nosso site.</p>
             </div>
         <div className="new-incident-container">
             
