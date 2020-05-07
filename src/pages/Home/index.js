@@ -139,7 +139,10 @@ export class Home extends Component {
                     </ul>
                 </div>*/}
                 <div class="text">
-                    <h1>Faça sua parte ajudando quem a precisa, seja com apoio emocional, ou algo material.</h1>
+                    <h1>Escolha uma opção abaixo, e entre em contato com a pessoa que você quer ajudar</h1>
+                    <h3>Faça sua parte ajudando a quem precisa, doe seu tempo, seja com apoio emocional, doações materiais, alimentos etc...<br />
+                        O mundo está passando por momentos dificeis, se cada um fazer sua parte, passaremos dessa, de uma forma mais tranquila.
+                        </h3>
                 </div>
                     <ul className="info info-texto">
                         

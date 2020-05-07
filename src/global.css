@@ -137,6 +137,7 @@ a.is-active {
 .box-img-home{
     background: url("../src/assets/homeimg.jpg");
     background-size:cover;
+    background-position: center;
     width: 50%;
     height: 100%;
     overflow: hidden;
@@ -275,8 +276,17 @@ a.is-active {
 
 }
 
-
 a.button.btn-yellow {
     background: #edc951;
     color: #000;
 }
+
+.index-container .text h1 {
+    margin-bottom: 10px;
+}
+
+.index-container .text h3{
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 35px;
+} 
