@@ -76,6 +76,9 @@ ul.info-texto{
 
 ul.info-texto li{
     background: #fff;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 20px 0px rgba(115, 115, 115, 0.15);
     padding: 24px;
     border-radius: 8px;
     position: relative;
@@ -176,10 +179,11 @@ max-height: 60px;
     margin-bottom: 40px;
 }
 .list-links {
-    margin-top: 10px;
-    margin-bottom: 10px;
     text-align: center;
-    padding: 0px 3%;
+    padding: 10px 3%;
+    background: #FFEB3B;
+    margin: 0;
+
 }
 
 .form.head {

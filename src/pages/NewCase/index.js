@@ -77,6 +77,10 @@ export default function NewIncident(){
     return(
         <div>
         <Header />
+        <div class="text info">
+                <h1>Realize o cadastro da sua solicitação</h1>
+                <p>A seu pedido de ajuda, será processado, até ser ativada em nosso site.</p>
+            </div>
         <div className="new-incident-container">
             
             <form onSubmit={handleNewIncident}>
@@ -109,7 +113,7 @@ export default function NewIncident(){
                     <input 
                     value={telefone}
                     onChange={e => setTelefone(e.target.value)}
-                    placeholder="Telefone Whatsapp" />
+                    placeholder="5511948105671" />
                     <textarea
                     value={description}
                     onChange={e => setDescription(e.target.value)}

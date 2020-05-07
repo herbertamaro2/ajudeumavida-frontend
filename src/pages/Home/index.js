@@ -138,6 +138,9 @@ export class Home extends Component {
                       
                     </ul>
                 </div>*/}
+                <div class="text">
+                    <h1>Faça sua parte ajudando quem a precisa, seja com apoio emocional, ou algo material.</h1>
+                </div>
                     <ul className="info info-texto">
                         
                         {this.state.cases.map((cases) => (

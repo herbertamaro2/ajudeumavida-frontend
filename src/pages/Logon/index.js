@@ -31,7 +31,7 @@ export default function Logon(){
                 <img src={logoImg} className="logo" /> 
 
                 <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
+                    <h1>Login</h1>
 
                     <input placeholder="Email"
                     value={email}
@@ -45,9 +45,12 @@ export default function Logon(){
 
                     <button type="submit" className="button">Entrar</button>
 
+                    <Link to="/category" className="button btn-yellow">Eu vou Ajudar</Link>
+
                     <Link to="/cases/new" className="back-link">
                         <FiLogIn size='14' color='#e02041'/> 
-                        Não tenho cadastro</Link>
+                        Precisando de ajuda? faça um cadastro</Link>
+
                 </form>
             </section>
             <div class="box-img-home">

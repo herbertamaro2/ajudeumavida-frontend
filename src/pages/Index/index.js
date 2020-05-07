@@ -8,11 +8,12 @@ export default function Index(){
         <div className="logon-container">
             <section className="form"> 
                 <img src={logoImg} className="logo" /> 
+             
+                <h1>Escolhe uma das opções abaixo:</h1>
+                <p>Ajuda comunitária</p>
 
-                    <h1>Faça seu logon</h1>
-
-                    <Link to="/category" className="button">Eu vou Ajudar</Link>
-                    <Link to="/cases/new" className="button">Preciso de Ajuda</Link>
+                <Link to="/category" className="button">Eu vou Ajudar</Link>
+                <Link to="/cases/new" className="button btn-yellow">Preciso de Ajuda</Link>
 
             </section>
             <div class="box-img-home">

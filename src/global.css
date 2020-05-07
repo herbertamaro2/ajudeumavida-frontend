@@ -8,8 +8,8 @@
 }
 
 body{
-    font: 400 14px Roboto, sans-serif;
-    background: #f0f0f5;
+    font: 400 14px Roboto,sans-serif;
+    background: #f9f9f9;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -55,12 +55,36 @@ button{
 }
 
 .button{
+    box-shadow: 0 0 0 1px rgba(34,36,38,.15) inset, 0 -0.2em 0 0 rgba(34,36,38,.15) inset;
     margin-top: 16px;
     font-size: 18px;
     line-height: 60px;
     height: 60px;
 }
 
+
+.text h1{
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-bottom: 35px;
+}
+
+.text.info{
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+.text.info p{
+    font-size: 16px;
+}
+.text.info h1 {
+    margin-bottom: 10px !important;
+    margin-top: 30px !important;
+}
 a.is-active {
     background: #4caf50 !important;
 }
@@ -124,6 +148,27 @@ a.is-active {
         width: 100%;
         min-width: 100%;
         margin: 0;
+    }
+
+    .new-incident-container .form {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .new-incident-container {
+        width: 100%;
+        float: left;
+        display: block;
+        height: auto;
+        margin-top: 0 !important;
+    }
+    .new-incident-container .content {
+        padding: 0 !important;
+    }
+    .info-texto a.button {
+        font-size: 19px;
+        height: auto !important;
+        line-height: 2.1;
+        background: #4CAF50;
     }
 
     .form .logo {
@@ -228,4 +273,10 @@ a.is-active {
         display: none;
     }
 
+}
+
+
+a.button.btn-yellow {
+    background: #edc951;
+    color: #000;
 }
