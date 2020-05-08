@@ -89,7 +89,7 @@ export class Home extends Component {
             <Header />
             <div className="list-links">
                     <ul>
-                    {this.state.isLoadingCat ? <div className="loading"><Loading /></div> : null}
+                    
                             <li><a className="button" href="/category/">Todos</a></li>
                             {this.state.categories.map((categories) => (
                             <li>
@@ -149,8 +149,8 @@ export class Home extends Component {
                         O mundo está passando por momentos dificeis, se cada um fazer sua parte, passaremos dessa, de uma forma mais tranquila.
                         </h3>
                 </div>
+                    {this.state.isLoading ? <div className="loading"><img src={Loading} /></div> : null}
                     <ul className="info info-texto">
-                    {this.state.isLoading ? <h1>Carregando</h1>: null}
                         {this.state.cases.map((cases) => (
                             <li key={cases.id}>
                             <h3 className="title">{cases.title}</h3>

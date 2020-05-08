@@ -164,9 +164,11 @@ max-height: 60px;
     margin-right: 5px;
 }
 
-.index-container .form{
+.index-container .form {
     width: 100%;
     float: left;
+    max-height: initial;
+    overflow: initial;
 }
 
 .index-container .map{

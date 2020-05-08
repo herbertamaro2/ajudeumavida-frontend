@@ -297,3 +297,8 @@ a.button.btn-yellow {
     float: left;
     text-align: center;
 }
+
+
+.loading img{
+    max-height: 200px;
+}
