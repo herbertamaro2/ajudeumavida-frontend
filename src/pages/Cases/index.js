@@ -64,7 +64,7 @@ export class Cases extends Component {
                             <strong>DESCRIÇÃO:</strong>
                             <p>{casesView.description}</p>
                             <Link className="button btn"  to={`/messages/${casesView.id}`}>Enviar Mensagem</Link>
-                            <Link className="button" to={`https://wa.me/${casesView.telefone}`}>Entre em contato via Whatsapp</Link>        
+                            <a className="button" href={`https://wa.me/${casesView.telefone}`} target="_blank">Entre em contato via Whatsapp</a>        
                         </li>  
                                            
                     </ul>
