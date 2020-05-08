@@ -290,3 +290,10 @@ a.button.btn-yellow {
     font-weight: normal;
     margin-bottom: 35px;
 } 
+
+
+.loading{
+    width: 100%;
+    float: left;
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import Loading from '../../assets/loading.gif';
 import './styles.css';
 import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
@@ -88,7 +89,7 @@ export class Home extends Component {
             <Header />
             <div className="list-links">
                     <ul>
-                    {this.state.isLoadingCat ? <h1>Carregando</h1>: null}
+                    {this.state.isLoadingCat ? <div className="loading"><Loading /></div> : null}
                             <li><a className="button" href="/category/">Todos</a></li>
                             {this.state.categories.map((categories) => (
                             <li>
