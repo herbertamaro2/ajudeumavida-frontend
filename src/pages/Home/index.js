@@ -10,6 +10,8 @@ export class Home extends Component {
         super()
         this.state = {
            initial: 'state',
+           isLoading: false,
+           isLoadingCat: false,
           showingInfoWindow: true,
           showInfoWindow: true,
           activeMarker: {},
@@ -21,11 +23,12 @@ export class Home extends Component {
       }
       
       ListCasesHome() {
+        this.setState({ isLoading: true }); 
         fetch(`https://ajudeumavida-backend.herokuapp.com/home/`)
         .then((response) => response.json())
         .then(casesList => {
             this.setState({ cases: casesList });
-        });
+        }).then(() => this.setState({ isLoading: false }));
         }
 
     componentDidMount() {
@@ -85,6 +88,7 @@ export class Home extends Component {
             <Header />
             <div className="list-links">
                     <ul>
+                    {this.state.isLoadingCat ? <h1>Carregando</h1>: null}
                             <li><a className="button" href="/category/">Todos</a></li>
                             {this.state.categories.map((categories) => (
                             <li>
@@ -145,7 +149,7 @@ export class Home extends Component {
                         </h3>
                 </div>
                     <ul className="info info-texto">
-                        
+                    {this.state.isLoading ? <h1>Carregando</h1>: null}
                         {this.state.cases.map((cases) => (
                             <li key={cases.id}>
                             <h3 className="title">{cases.title}</h3>
