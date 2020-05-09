@@ -47,11 +47,12 @@ export class Home extends Component {
         ListCases(a) {
                 const category = a;
                 this.setState({ activeId: a })
+                this.setState({ isLoading: true }); 
                 fetch(`https://ajudeumavida-backend.herokuapp.com/home/category/${category}`)
                 .then((response) => response.json())
                 .then(casesList => {
                     this.setState({ cases: casesList });
-            }); 
+            }).then(() => this.setState({ isLoading: false })); 
         }
 
         Resolved(a) {
