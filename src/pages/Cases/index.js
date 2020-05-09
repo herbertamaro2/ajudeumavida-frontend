@@ -21,7 +21,7 @@ export class Cases extends Component {
 
       componentDidMount(){
             const { match: { params } } = this.props;
-            fetch(`http://localhost:3333/case/${params.id}`)
+            fetch(`https://ajudeumavida-backend.herokuapp.com/case/${params.id}`)
             .then((response) => response.json())
             .then(res => {
                 this.setState({ casesView: res });
