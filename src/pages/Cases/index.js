@@ -21,7 +21,7 @@ export class Cases extends Component {
 
       componentDidMount(){
             const { match: { params } } = this.props;
-            fetch(`https://ajudeumavida-backend.herokuapp.com/case/${params.id}`)
+            fetch(`http://localhost:3333/case/${params.id}`)
             .then((response) => response.json())
             .then(res => {
                 this.setState({ casesView: res });
@@ -59,6 +59,7 @@ export class Cases extends Component {
                 <div className="section content">
                     <ul className="info case info-texto">
                         <li>
+                            <span class="cat">{casesView.titlecategory}</span>
                             <h3 className="title">{casesView.title}</h3>
 
                             <strong>DESCRIÇÃO:</strong>

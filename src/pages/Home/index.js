@@ -94,7 +94,7 @@ export class Home extends Component {
                             {this.state.categories.map((categories) => (
                             <li>
                                 <Link key={categories.id} className={ this.state.activeId === categories.id && 'is-active'} activeClassName="active" onClick={() => this.ListCases(categories.id)}>
-                                    {categories.title}</Link>
+                                    {categories.titlecategory}</Link>
                             </li>
                             ))}
                       
@@ -153,6 +153,7 @@ export class Home extends Component {
                     <ul className="info info-texto">
                         {this.state.cases.map((cases) => (
                             <li key={cases.id}>
+                            <span class="cat">{cases.titlecategory}</span>
                             <h3 className="title">{cases.title}</h3>
                             <strong>DESCRIÇÃO:</strong>
                             <p>{cases.description}</p>

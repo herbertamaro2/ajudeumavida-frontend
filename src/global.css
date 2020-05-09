@@ -302,3 +302,25 @@ a.button.btn-yellow {
 .loading img{
     max-height: 200px;
 }
+
+span.cat {
+    position: absolute;
+    top: 0;
+    background: #ffeb3b;
+    padding: 2px 7px;
+    font-size: 13px;
+    font-weight: bold;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 0px5px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.10);
+}
+
+li h3.title {
+    margin-top: 10px;
+}
