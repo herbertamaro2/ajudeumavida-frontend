@@ -13,6 +13,7 @@ export default class Messages extends Component {
           id:'',
           id_case:'',
           telephone:'',
+          titlemsg:'',
           description:'',
           name: '',
           data: [],
@@ -53,6 +54,7 @@ export default class Messages extends Component {
         const newSettingsGeneral = {
             name:this.refs.name.value,
             telephone:this.refs.telephone.value,
+            titlemsg:this.refs.titlemsg.value,
             description:this.refs.description.value,
         }
         this.handleSendMessage(newSettingsGeneral);
@@ -116,6 +118,11 @@ export default class Messages extends Component {
                     name="telephone"
                     value={this.state.telephone} onChange={this.handleInputChange}
                     placeholder="Telefone(não obrigatório)" />
+                    <input 
+                    ref="titlemsg" 
+                    name="titlemsg"
+                    value={this.state.titlemsg} onChange={this.handleInputChange}
+                    placeholder="Titulo da Mensagem" />
                     <textarea
                     ref="description" 
                     name="description"

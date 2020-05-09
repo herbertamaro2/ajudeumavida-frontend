@@ -16,7 +16,7 @@ export class Profile extends Component {
            activeMarker: {},
            selectedPlace: {},  
            casesView: {},
-           messages: {}
+           messages: []
         }
       }
     componentDidMount(){
@@ -25,24 +25,19 @@ export class Profile extends Component {
             headers: {
                 authorization:id,
             }})
-        .then((response) => response.json())
+        .then((res) => res.json())
         .then(res => {
             this.setState({ casesView: res });
             console.log(res);
         });
 
-       
-    } 
-
-    handleGetMessages = (e) => {
-        fetch(`https://ajudeumavida-backend.herokuapp.com/messages/${e}`)
-        .then((responsemes) => responsemes.json())
-        .then(resmes => {
-            this.setState({ messages: resmes });
-            //console.log(resmes);
-        });
-    }
-    
+            fetch(`https://ajudeumavida-backend.herokuapp.com/messages/${id}`)
+            .then((responsemes) => responsemes.json())
+            .then(messagesList => {
+                this.setState({ messages: messagesList });
+                console.log(messagesList);
+        }).then(() => this.setState({ isLoading: false })); 
+        } 
 
     onMarkerClick = (props, marker, e) => {
         this.setState({
@@ -69,7 +64,6 @@ export class Profile extends Component {
         }
         const { casesView } = this.state;
 
-        this.handleGetMessages(`{caseView.id}`);
         
     return(
 
@@ -100,15 +94,18 @@ export class Profile extends Component {
                 </div>
 
                     <div className="section content">
-                        <ul className="info case info-texto">
-                            <h3 className="title">Mensagens</h3>
-
-                            <li>
-                                <h3 className="title">Titulo da Mensagem</h3>
+                        <ul className="info case info-texto msg-list">
+                            <h3 className="title">Mensagens Recebidas</h3>
+                            {this.state.messages.map((messages) => (
+                            <li key={messages.id}>
+                                <strong>TITULO DA MENSAGEM:</strong>
+                                <p>{messages.titlemsg}</p>
+                                <strong>TELEFONE:</strong>
+                                <p>{messages.telephone}</p>
                                 <strong>DESCRIÇÃO:</strong>
-                                <p>Texto da Mensagem</p>        
-                            </li>  
-                                            
+                                <p>{messages.description}</p>        
+                            </li>
+                            ))}             
                         </ul>
                         <Link to="/category/" className="back-link">
                             <FiArrowLeft size='14' color='#e02041'/> 
