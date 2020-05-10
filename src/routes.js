@@ -17,6 +17,7 @@ export default function Routes() {
                 <Route path="/" exact component={Index} />
                 <Route path="/login" component={Logon} />
                 <Route path="/category/" exact component={Home} />
+                <Route path="/category/:page" exact component={Home} />
                 <Route path="/category/cases/:id" component={Home} />
                 <Route path="/profile" component={Profile} />
                 <Route path="/cases/new" exact component={NewIncident} />

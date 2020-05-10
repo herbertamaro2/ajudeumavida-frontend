@@ -18,9 +18,12 @@ export class Home extends Component {
           activeMarker: {},
           selectedPlace: {},
           cases: [],
+          currentPage: 1,
+          todosPerPage: 6,
           categories: [], 
           activeId: null
         };
+        this.handleClick = this.handleClick.bind(this);
       }
       
       ListCasesHome() {
@@ -33,9 +36,7 @@ export class Home extends Component {
         }
 
     componentDidMount() {
-
         //const { match: { params } } = this.props;
-        
         fetch(`https://ajudeumavida-backend.herokuapp.com/home/categories`)
         .then((response) => response.json())
         .then(categoriesList => {
@@ -77,6 +78,12 @@ export class Home extends Component {
         }
     };
 
+    handleClick(event) {
+        this.setState({
+          currentPage: Number(event.target.id)
+        });
+      }
+
     
     render() {
         const containerStyle = {
@@ -84,6 +91,45 @@ export class Home extends Component {
             width: '100%',
             height: '100%'
           }
+
+          const { cases, todos, currentPage, todosPerPage } = this.state;
+
+        // Logic for displaying current todos
+        const indexOfLastTodo = currentPage * todosPerPage;
+        const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
+        const currentTodos = cases.slice(indexOfFirstTodo, indexOfLastTodo);
+
+        const renderTodos = currentTodos.map((cases, index) => {
+          return(
+            <li key={cases.id}>
+            <span class="cat">{cases.titlecategory}</span>
+            <h3 className="title">{cases.title}</h3>
+            <strong>DESCRIÇÃO:</strong>
+            <p>{cases.description}</p>
+
+            <Link className="button" to={`/cases/${cases.id}`}>Ver Mais</Link></li>
+          );
+        });
+        
+        
+
+        // Logic for displaying page numbers
+        const pageNumbers = [];
+        for (let i = 1; i <= Math.ceil(cases.length / todosPerPage); i++) {
+          pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+          return (
+            <li
+              key={number}
+              id={number}
+              onClick={this.handleClick}
+            >
+              {number}
+            </li>
+          );
+        });
         
         return(
             <div className="index-container">
@@ -152,16 +198,10 @@ export class Home extends Component {
                 </div>
                     {this.state.isLoading ? <div className="loading"><img src={Loading} /></div> : null}
                     <ul className="info info-texto">
-                        {this.state.cases.map((cases) => (
-                            <li key={cases.id}>
-                            <span class="cat">{cases.titlecategory}</span>
-                            <h3 className="title">{cases.title}</h3>
-                            <strong>DESCRIÇÃO:</strong>
-                            <p>{cases.description}</p>
-            
-                            <Link className="button" to={`/cases/${cases.id}`}>Ver Mais</Link>        
-                        </li>
-                        ))}
+                        {renderTodos}
+                    </ul>
+                    <ul id="page-numbers">
+                    {renderPageNumbers}
                     </ul>
                 </div>
             </section>
