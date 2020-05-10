@@ -107,7 +107,7 @@ export class Home extends Component {
             <strong>DESCRIÇÃO:</strong>
             <p>{cases.description}</p>
 
-            <Link className="button" to={`/cases/${cases.id}`}>Ver Mais</Link></li>
+            <Link className="button" to={`/cases/${cases.id}`}>QUERO AJUDAR</Link></li>
           );
         });
         
