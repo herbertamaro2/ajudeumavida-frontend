@@ -101,7 +101,7 @@ export class Home extends Component {
 
         const renderTodos = currentTodos.map((cases, index) => {
           return(
-            <li key={cases.id}>
+            <li key={cases.id}> 
             <span class="cat">{cases.titlecategory}</span>
             <h3 className="title">{cases.title}</h3>
             <strong>DESCRIÇÃO:</strong>
